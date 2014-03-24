@@ -17,6 +17,11 @@ public class MergeSortLeftRunnable<T extends Comparable> implements Runnable{
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         array = sort(array);
     }
 
