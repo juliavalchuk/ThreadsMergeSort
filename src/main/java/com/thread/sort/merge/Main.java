@@ -19,7 +19,7 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Comparable[] carray = (Comparable[])runnable.getArray(); // I have problem with this
+        Comparable[] carray = runnable.getArray(); // I have problem with this
         systemOutArray(carray);
 
     }

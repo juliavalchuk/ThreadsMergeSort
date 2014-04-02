@@ -1,14 +1,11 @@
 package com.thread.sort.merge;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Objects;
 
 /**
  * Created by julia
  */
-public class MergeSortLeftRunnable<T extends Comparable> implements Runnable{
+public class MergeSortLeftRunnable<T extends Comparable<? super T>> implements Runnable{
     T[] array;
 
     public MergeSortLeftRunnable(T[] a){
