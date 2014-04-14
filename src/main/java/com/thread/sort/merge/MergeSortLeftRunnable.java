@@ -31,11 +31,11 @@ public class MergeSortLeftRunnable<T extends Comparable<? super T>> implements R
         T[] left = Arrays.copyOf(array, middle);
         T[] right = Arrays.copyOfRange(array, middle, array.length);
 
-        left = sort(left);
-
         MergeSortLeftRunnable<T> rightRunnable = new MergeSortLeftRunnable<T>(right);
         Thread thread = new Thread(rightRunnable);
         thread.start();
+
+        left = sort(left);
         try {
             thread.join();
         } catch (InterruptedException e) {
